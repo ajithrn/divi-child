@@ -30,7 +30,9 @@ function lazy_load_slider_bg_add_footer_js() {
 }
 
 // Add action
-add_action( 'wp', 'lazy_load_slider_bg_check_if_needed', 90 );
+if (!is_user_logged_in()){
+  add_action( 'wp', 'lazy_load_slider_bg_check_if_needed', 90 );
+}
 
 
 
@@ -68,4 +70,6 @@ function lazy_load_section_bg_add_footer_js() {
 }
 
 // Add action
-add_action( 'wp', 'lazy_load_section_bg_check_if_needed', 90 );
+if (!is_user_logged_in()){
+	add_action( 'wp', 'lazy_load_section_bg_check_if_needed', 90 );
+}
